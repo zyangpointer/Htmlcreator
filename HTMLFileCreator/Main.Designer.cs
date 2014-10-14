@@ -1,6 +1,6 @@
 ﻿namespace HTMLFileCreator
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,12 @@
             this.txt_dstDir = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.btn_addPage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn_create
             // 
-            this.btn_create.Location = new System.Drawing.Point(112, 112);
+            this.btn_create.Location = new System.Drawing.Point(41, 114);
             this.btn_create.Name = "btn_create";
             this.btn_create.Size = new System.Drawing.Size(149, 49);
             this.btn_create.TabIndex = 0;
@@ -70,17 +71,29 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // Form1
+            // btn_addPage
+            // 
+            this.btn_addPage.Location = new System.Drawing.Point(196, 114);
+            this.btn_addPage.Name = "btn_addPage";
+            this.btn_addPage.Size = new System.Drawing.Size(149, 49);
+            this.btn_addPage.TabIndex = 4;
+            this.btn_addPage.Text = "Add Page";
+            this.btn_addPage.UseVisualStyleBackColor = true;
+            this.btn_addPage.Click += new System.EventHandler(this.btn_addPage_Click);
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(375, 175);
+            this.Controls.Add(this.btn_addPage);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_dstDir);
             this.Controls.Add(this.btn_create);
-            this.Name = "Form1";
+            this.Name = "Main";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,6 +105,7 @@
         private System.Windows.Forms.TextBox txt_dstDir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_addPage;
     }
 }
 
