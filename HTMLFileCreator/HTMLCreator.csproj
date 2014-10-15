@@ -104,6 +104,9 @@
     <Content Include="libs\backbone-min.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="libs\jquery-2.1.1.min.js">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="libs\require.js">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
