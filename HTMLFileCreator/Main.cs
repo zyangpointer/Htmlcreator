@@ -17,7 +17,7 @@ namespace HTMLFileCreator
     public partial class Main : Form
     {
         static string[] _words = { "Sam", "Dot", "Perls" };
-        string destinationDir;
+        string destinationDir = @"C:\Users\Zheng\Desktop\WebGeneratedFile";
         int pageCounts = 1;
 
         public Main()
@@ -29,8 +29,7 @@ namespace HTMLFileCreator
         private void Form1_Load(object sender, EventArgs e)
         {
             // Load current working folder to text box
-            //this.txt_dstDir = 
-
+            this.txt_dstDir.Text = destinationDir;
         }
 
         private void btn_create_Click(object sender, EventArgs e)
@@ -41,11 +40,14 @@ namespace HTMLFileCreator
             EmptyPage emptyPage = new EmptyPage("page" + pageCounts++);
             emptyPage.generatePage(destinationDir);
 
-            // Copy lib files to desination folder
+            // Copy lib, js template files to desination folder
             try
             {
-                string path =  this.txt_dstDir.Text + "/libs";
+                string path = destinationDir + "/libs";
                 Utils.Util.DirectoryCopy("libs", path, true);
+
+                string jsTemplatePath = destinationDir + "/jstemplate/backbone";
+                Utils.Util.DirectoryCopy("jstemplate/backbone", jsTemplatePath, true);
             }
             catch (Exception ee)
             {

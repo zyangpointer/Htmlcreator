@@ -51,7 +51,6 @@ namespace HTMLFileCreator.Pages
 
         protected void addScriptBlock(HtmlTextWriter writer, string content)
         {
-
             writer.RenderBeginTag("script");
             writer.Write(content);
             writer.RenderEndTag();

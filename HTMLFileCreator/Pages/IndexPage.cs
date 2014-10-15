@@ -28,13 +28,20 @@ namespace HTMLFileCreator.Pages
                 writer.RenderBeginTag(HtmlTextWriterTag.Head);
 
                 // Script block
-                string ScriptPath = "libs/";
-                string[] ScriptNames = { "backbone-min.js", "require.js", "underscore.js" };
+                string LibsScriptPath = "libs/";
+                string JSTemplateScriptPath = "jstemplate/";
 
-                // Backbone.js
-                addScriptTags(writer, ScriptPath, ScriptNames);
+                // ! underscore declaration must be before backbone
+                /// TODO: Adding funcionality of choosing js libs and automatically detect depencies and 
+                /// generating loading order
+                string[] ScriptNames = { "underscore-min.js", "backbone-min.js", "require.js"};
 
-                //addScriptBlock(writer, "alert('hello world')");
+                string[] JSTemplateScriptNames = { "backbone/backbone-template.js" };
+
+                addScriptTags(writer, LibsScriptPath, ScriptNames);
+                addScriptTags(writer, JSTemplateScriptPath, JSTemplateScriptNames);
+
+
 
 
                 writer.RenderEndTag();
