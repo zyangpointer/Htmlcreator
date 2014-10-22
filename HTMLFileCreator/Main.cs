@@ -53,6 +53,8 @@ namespace HTMLFileCreator
             {
                 MessageBox.Show(ee.Message);
             }
+
+            //
         }
 
         private void button1_Click(object sender, EventArgs e)
