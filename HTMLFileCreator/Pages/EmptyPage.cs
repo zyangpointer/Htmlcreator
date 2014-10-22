@@ -26,7 +26,7 @@ namespace HTMLFileCreator.Pages
                 writer.RenderBeginTag(HtmlTextWriterTag.Head);
 
                 writer.RenderEndTag();
-
+                
                 writer.WriteLine();
 
                 // Body tag
