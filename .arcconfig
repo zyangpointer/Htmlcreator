@@ -1,0 +1,5 @@
+{
+  "project.name" : "HtmlCreator",
+  "phabricator.uri" : "http://p.musicj.org/diffusion/HC/",
+  "unit.engine" : "PhutilUnitTestEngine"
+}
